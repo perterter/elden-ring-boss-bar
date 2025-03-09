@@ -1,7 +1,7 @@
 const {min, max, floor, sqrt} = Math
 
 
-const _assetPath = location.href.replace(/new-area\/.*$/, 'new-area/image-creator/assets/')
+const _assetPath = './assets/'
 
 class Asset {
     constructor(path) {

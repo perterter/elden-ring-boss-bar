@@ -778,5 +778,5 @@ input.bad-url {
 @font-face {
     /* Had to 'mangle' the font name because CSS HATES it when it starts with a number? */
     font-family: '_3270 Regular';
-    src: url(image-creator/assets/font/3270-Regular.ttf);
+    src: url(./assets/font/3270-Regular.ttf);
 }
