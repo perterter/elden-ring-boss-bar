@@ -6,6 +6,8 @@
 var macroGen
 
 var overrideHealth;
+var overrideRecentDamage;
+var overrideDamageNumber;
 
 // document>DOMContentLoaded: Triggers as soon as the DOM's abstract objects are loaded, but not necessarily images/assets.
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,6 +39,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (searchParams.get('currentHealth')) {
         const health = Number.parseFloat(searchParams.get('currentHealth'));
         overrideHealth = health;
+    }
+
+    if (searchParams.get('recentDamage')) {
+        const recentDamage = Number.parseFloat(searchParams.get('recentDamage'));
+        overrideRecentDamage = recentDamage;
+    }
+
+    if (searchParams.get('damageNumber')) {
+        const damageNumber = Number.parseFloat(searchParams.get('damageNumber'));
+        overrideDamageNumber = damageNumber;
     }
 
     // 'img' param prefills the background image URL input

@@ -1288,6 +1288,12 @@ async function drawEldenRingBoss(ctx, canvas, gen, sliders) {
     if (overrideHealth !== null && overrideHealth !== undefined) {
         health = overrideHealth;
     }
+    if (overrideRecentDamage !== null && overrideRecentDamage !== undefined) {
+        recentDamage = overrideRecentDamage;
+    }
+    if (overrideDamageNumber !== null && overrideDamageNumber !== undefined) {
+        damageNumber = overrideDamageNumber;
+    }
 
     // Start loading assets
     const basePromise = ASSETS.eldenRing.bossHealthBase.get()
