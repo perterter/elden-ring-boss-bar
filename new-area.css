@@ -337,7 +337,7 @@ body {
     display: inline-block;
     width: 96%;
     max-width: none;
-    margin: 1% 2% 2%;
+    margin: 0;
     padding: 0;
 }
 
@@ -350,22 +350,21 @@ canvas.small {
     border: 1px solid #fff3;
 }
 canvas.big {
-    max-height: 75vh;
+    /* max-height: 75vh;
     max-width: 120vw;
-    border: 1px solid #fff3;
+    border: 1px solid #fff3; */
 }
 
 .canvas-pane {
     float: left;
-    width: calc(100% - 416px);
-    padding: 16px;
+    /* width: calc(100% - 416px); */
+    padding: 0;
 }
 .canvas-wrapper {
     position: relative;
     width: 100%;
     min-height: 60vh;
     display: flex;
-    overflow-x: auto;
 }
 
 .sliders-pane {

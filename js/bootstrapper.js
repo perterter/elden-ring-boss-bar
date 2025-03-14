@@ -5,6 +5,7 @@
 /** @type {MacroGenerator} The global MacroGenerator. */
 var macroGen
 
+var overrideHealth;
 
 // document>DOMContentLoaded: Triggers as soon as the DOM's abstract objects are loaded, but not necessarily images/assets.
 document.addEventListener('DOMContentLoaded', function () {
@@ -31,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // 'caption' param prefills the caption input
     if (searchParams.get('caption')) {
         byId('image-caption').value = searchParams.get('caption')
+    }
+
+    if (searchParams.get('currentHealth')) {
+        const health = Number.parseFloat(searchParams.get('currentHealth'));
+        overrideHealth = health;
     }
 
     // 'img' param prefills the background image URL input
@@ -85,14 +91,4 @@ window.addEventListener('load', function () {
             }
         }
     }
-})
-
-
-// window>beforeunload: Warn the user they will lose any unsaved images.
-window.addEventListener('beforeunload', function (e) {
-    // TODO: Only do this in case the user has ever interacted with the editor?
-    const message = 'Beware, edited macros and layers are lost when leaving the page.'
-        + ' Make sure you have saved any images you wish to keep.';
-    (e || window.event).returnValue = message
-    return message
 })
